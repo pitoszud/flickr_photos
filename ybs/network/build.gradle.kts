@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +7,17 @@ plugins {
     id("dagger.hilt.android.plugin")
     id("kotlinx-serialization")
 }
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { stream ->
+        localProperties.load(stream)
+    }
+}
+
+val flickrApiKey: String = localProperties["FLICKR_API_KEY"]?.toString()
+    ?: System.getenv("FLICKR_API_KEY")
 
 android {
     namespace = "com.velocip.ybs.network"
@@ -15,6 +28,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildConfigField("String", "FLICKR_API_KEY_ID", "\"$flickrApiKey\"")
     }
 
     buildTypes {
@@ -32,6 +47,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
