@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="709cc7cb-43c2-4542-9a7c-faab9a6e5995" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/velocip/ybs/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/MainApp.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/Navigation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/ui/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/ui/theme/Theme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/velocip/ybs/ui/theme/Type.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/velocip/ybs/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/androidTest/java/com/velocip/ybs/core/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/Result.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/Screen.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/di/CoreModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/fake/FakeClock.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/theme/AppDesignSystem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/theme/AppTheme.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/theme/Color.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/utils/AppConstants.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/velocip/ybs/core/utils/Clock.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/res/drawable/sample_image.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/velocip/ybs/core/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/androidTest/java/com/velocip/ybs/data/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/velocip/ybs/data/Photo.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/velocip/ybs/data/di/DataModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/velocip/ybs/data/repo/PhotoSearchRepository.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/main/java/com/velocip/ybs/data/utils/DataMappingExt.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/src/test/java/com/velocip/ybs/data/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/androidTest/java/com/velocip/ybs/database/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/velocip/ybs/database/dao/PhotoDao.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/velocip/ybs/database/db/PhotoDatabase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/velocip/ybs/database/di/DatabaseModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/velocip/ybs/database/entity/PhotoEntity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/velocip/ybs/database/utils/DatabaseConverter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/test/java/com/velocip/ybs/database/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/androidTest/java/com/velocip/ybs/model/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/velocip/ybs/model/PhotoDetails.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/velocip/ybs/model/PhotoItemUi.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/velocip/ybs/model/PhotoLocation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/com/velocip/ybs/model/PhotosUiState.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/test/java/com/velocip/ybs/model/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/androidTest/java/com/velocip/ybs/network/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/config/CacheConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/data_source/PhotoDefaultRemoteDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/data_source/RemoteConfigDataSource.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/di/NetworkModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/di/RemoteConfigModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/di/RemoteDataSourceModule.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/CommentsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/CountryDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/CountyDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/DatesDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/DescriptionDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/EditabilityDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/FlickrPhotoDetailsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/GeopermsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/GiftDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/LocalityDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/LocationDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/NeighbourhoodDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/NotesDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/OwnerDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/PeopleDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/PhotoDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/PubliceditabilityDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/RegionDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/TagDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/TagsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/TitleDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/UrlDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/UrlsDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/UsageDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photo_details/VisibilityDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photos/FlickrPhotosDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photos/PhotoDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/photos/PhotosDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/CountDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/DescriptionDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/FirstdateDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/FirstdatetakenDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/FlickrPersonDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/MobileurlDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/PersonDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/PhotosDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/PhotosurlDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/ProfileurlDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/dto/user/UsernameDto.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/result/PhotoDetailsItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/result/PhotoItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/result/PhotoResult.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/utils/PhotoItemBuilder.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/main/java/com/velocip/ybs/network/utils/UrlConfig.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/test/java/com/velocip/ybs/network/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/network/src/test/java/com/velocip/ybs/network/PhotoDetailDtoItemBuilderTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/androidTest/java/com/velocip/ybs/photos/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/navigation/Navigation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/components/ContentLoading.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/components/PhotosTopAppBar.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photo_details/PhotoDetailsRoute.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photo_details/PhotoDetailsViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photos/PhotoItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photos/PhotosRoute.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photos/PhotosViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photos/SearchPhotoInput.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/user_photos/UserPhotoItem.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/user_photos/UserPhotosRoute.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/user_photos/UserPhotosViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/res/drawable/ic_account.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photos/src/test/java/com/velocip/ybs/photos/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/consumer-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/androidTest/java/com/velocip/ybs/testing/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/velocip/ybs/testing/ExampleUnitTest.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=18251FDF600D8F)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ybs_photo_app" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="valueResourceFile" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2m0sGJP2oohCRQTOEP1EiShvOMK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Run",
+    "Compose Preview.BubbleTimingHopsPreview.executor": "Run",
+    "Compose Preview.PhotoDetailsScreenPreview.executor": "Run",
+    "Compose Preview.PhotoItemPreview.executor": "Run",
+    "Compose Preview.UserPhotoItemPreview.executor": "Run",
+    "Gradle.PhotoDetailDtoItemBuilderTest.executor": "Run",
+    "Gradle.PhotoItemBuilderTest.build photo item no tags.executor": "Run",
+    "Gradle.PhotoItemBuilderTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "ui",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Develop/Android/Samples/ybc_flickr_photos/ybs",
+    "settings.editor.selected.configurable": "live.edit.configurable"
+  },
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "C:\\Users\\patry\\.gradle"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Develop\Android\Tests\ybs\core\src\main\res\drawable" />
+      <recent name="C:\Develop\Android\Tests\ybs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Develop\Android\Tests\ybs\photos\src\main\java\com\velocip\ybs\photos\presentation\screens\photos" />
+      <recent name="C:\Develop\Android\Tests\ybs\photos\src\main\java\com\velocip\ybs\photos\presentation\screens\photo_details" />
+      <recent name="C:\Develop\Android\Tests\ybs\photos\src\main\java\com\velocip\ybs\photos\presentation\screens\user_photos" />
+      <recent name="C:\Develop\Android\Tests\ybs\network\src\main\java\com\velocip\ybs\network\data_source" />
+      <recent name="C:\Develop\Android\Tests\ybs\photos\src\main\java\com\velocip\ybs\photos\presentation\screens" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.velocip.ybs.photos.presentation.screens.user_photos" />
+      <recent name="com.velocip.ybs.photos.presentation.screens.photos" />
+      <recent name="com.velocip.ybs.network.config" />
+      <recent name="com.velocip.ybs.network.dto.photo_details" />
+      <recent name="com.velocip.ybs.database.di" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="ybs_photo_app.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BubbleTimingHopsPreview" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="ybs_photo_app.core" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.velocip.ybs.core.ui.BubbleTimingHopsKt.BubbleTimingHopsPreview" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.velocip.ybs.core.ui.BubbleTimingHopsKt.BubbleTimingHopsPreview" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhotoDetailsScreenPreview" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="ybs_photo_app.photos" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.velocip.ybs.photos.presentation.screens.PhotoDetailsRouteKt.PhotoDetailsScreenPreview" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.velocip.ybs.photos.presentation.screens.PhotoDetailsRouteKt.PhotoDetailsScreenPreview" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhotoItemPreview" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="ybs_photo_app.photos" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.velocip.ybs.photos.presentation.components.PhotoItemKt.PhotoItemPreview" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.velocip.ybs.photos.presentation.components.PhotoItemKt.PhotoItemPreview" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserPhotoItemPreview" type="ComposePreviewRunConfiguration" temporary="true">
+      <module name="ybs_photo_app.photos" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="--es composable com.velocip.ybs.photos.presentation.screens.user_photos.UserPhotoItemKt.UserPhotoItemPreview" />
+      <option name="MODE" value="specific_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="androidx.compose.ui.tooling.PreviewActivity" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="true" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <compose-preview-run-configuration composable-fqn="com.velocip.ybs.photos.presentation.screens.user_photos.UserPhotoItemKt.UserPhotoItemPreview" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhotoDetailDtoItemBuilderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":network:testDebugUnitTest" />
+            <option value="--tests" />
+            <option value="&quot;com.velocip.ybs.network.PhotoDetailDtoItemBuilderTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Compose Preview.BubbleTimingHopsPreview" />
+        <item itemvalue="Compose Preview.UserPhotoItemPreview" />
+        <item itemvalue="Compose Preview.PhotoItemPreview" />
+        <item itemvalue="Compose Preview.PhotoDetailsScreenPreview" />
+        <item itemvalue="Gradle.PhotoDetailDtoItemBuilderTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="709cc7cb-43c2-4542-9a7c-faab9a6e5995" name="Changes" comment="" />
+      <created>1726224731695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726224731695</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/photos/src/main/java/com/velocip/ybs/photos/presentation/screens/photo_details/PhotoDetailsViewModel.kt</url>
+          <line>49</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/data/src/main/java/com/velocip/ybs/data/repo/PhotoSearchRepository.kt</url>
+          <line>93</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
