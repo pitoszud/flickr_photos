@@ -7,17 +7,6 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
-val localProperties = Properties()
-val localPropertiesFile = rootProject.file("local.properties")
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.inputStream().use { stream ->
-        localProperties.load(stream)
-    }
-}
-
-val flickrApiKey: String = localProperties["FLICKR_API_KEY"]?.toString()
-    ?: System.getenv("FLICKR_API_KEY")
-
 android {
     namespace = "com.velocip.ybs"
     compileSdk = 34
@@ -33,8 +22,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        buildConfigField("String", "FLICKR_API_KEY_ID", "\"$flickrApiKey\"")
     }
 
     buildTypes {
