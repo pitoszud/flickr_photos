@@ -1,7 +1,7 @@
 package com.velocip.ybs.network.di
 
-import com.velocip.ybs.network.utils.UrlProvider
-import com.velocip.ybs.network.utils.UrlProviderInterface
+import com.velocip.ybs.network.utils.UrlConfig
+import com.velocip.ybs.network.utils.UrlConfigInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -51,5 +51,5 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideUrlProvider(): UrlProviderInterface = UrlProvider()
+    fun provideUrlProvider(): UrlConfigInterface = UrlConfig()
 }
