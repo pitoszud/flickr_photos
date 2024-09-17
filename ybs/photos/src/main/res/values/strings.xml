@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_result_photo">Search result photo</string>
+    <string name="photo_owner_icon">Photo owner icon</string>
+    <string name="view_details">View Details</string>
+    <string name="back_arrow">Back to the previous screen icon</string>
+    <string name="user_photos">User Photos</string>
+</resources>
