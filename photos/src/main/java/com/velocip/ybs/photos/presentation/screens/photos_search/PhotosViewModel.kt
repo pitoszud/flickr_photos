@@ -1,4 +1,4 @@
-package com.velocip.ybs.photos.presentation.screens.photos
+package com.velocip.ybs.photos.presentation.screens.photos_search
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -62,7 +62,7 @@ class PhotosViewModel @Inject constructor(
         _isLoading.value = true
         _query.value = query
         viewModelScope.launch {
-            photoRepo.searchPhotos(query = query, refresh = refresh).fold(
+            photoRepo.searchPhotos(query = query.trim(), refresh = refresh).fold(
                 onSuccess = {
                     _isLoading.value = false
                     _errorMessage.value = null
