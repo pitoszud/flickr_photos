@@ -8,8 +8,7 @@ import com.velocip.ybs.data.utils.toPhotoUi
 import com.velocip.ybs.database.dao.PhotoDao
 import com.velocip.ybs.database.entity.PhotoEntity
 import com.velocip.ybs.model.PhotoItemUi
-import com.velocip.ybs.network.data_source.PhotoDefaultRemoteDataSource
-import com.velocip.ybs.network.data_source.RemoteConfigDataSource
+import com.velocip.ybs.network.data_source.PhotoRemoteDataSource
 import com.velocip.ybs.network.data_source.RemoteConfigDataSourceApi
 import com.velocip.ybs.network.result.PhotoDetailsItem
 import com.velocip.ybs.network.result.PhotoItem
@@ -24,7 +23,7 @@ import javax.inject.Inject
 
 
 class PhotoSearchRepository @Inject constructor(
-    private val photoDefaultRemoteDataSource: PhotoDefaultRemoteDataSource,
+    private val photoRemoteDataSource: PhotoRemoteDataSource,
     private val photoDao: PhotoDao,
     private val remoteConfigDataSource: RemoteConfigDataSourceApi,
     private val clock: Clock,
@@ -46,7 +45,7 @@ class PhotoSearchRepository @Inject constructor(
                     }
                 }
 
-                val remoteResult = photoDefaultRemoteDataSource.getPhotos(query)
+                val remoteResult = photoRemoteDataSource.getPhotos(query)
                 remoteResult.fold(
                     onSuccess = { photos: List<PhotoItem> ->
                         if (photos.isNotEmpty()) {
@@ -81,7 +80,7 @@ class PhotoSearchRepository @Inject constructor(
         return if (photoEntity != null && photoEntity.photoDetailsId.isNotEmpty()) {
             Result.success(photoEntity.toPhotoUi())
         } else {
-            photoDefaultRemoteDataSource.getPhotoDetails(photoId).fold(
+            photoRemoteDataSource.getPhotoDetails(photoId).fold(
                 onSuccess = { photoDetails: PhotoDetailsItem ->
                     val updatedPhotoEntity = photoEntity?.let {
                         updatePhotoEntity(it, photoDetails)
@@ -100,7 +99,7 @@ class PhotoSearchRepository @Inject constructor(
     override suspend fun getUserPhotos(userId: String): Result<List<PhotoItemUi>> {
         return withContext(dispatcher) {
             try {
-                val remoteResult = photoDefaultRemoteDataSource.getUserPhotos(userId)
+                val remoteResult = photoRemoteDataSource.getUserPhotos(userId)
                 remoteResult.fold(
                     onSuccess = { photos: List<PhotoItem> ->
                         Result.success(photos.map { it.toPhotoItemUi() })
