@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -23,6 +24,7 @@ import com.velocip.ybs.core.R
 import com.velocip.ybs.model.PhotoDetails
 import com.velocip.ybs.model.PhotoItemUi
 import com.velocip.ybs.model.PhotoLocation
+import com.velocip.ybs.photos.utils.Tags.TAG_USER_PHOTO
 
 
 @Composable
@@ -33,7 +35,8 @@ fun UserPhotoItem(
     Card(
         modifier = Modifier
             .padding(8.dp)
-            .shadow(2.dp, shape = RoundedCornerShape(16.dp)),
+            .shadow(2.dp, shape = RoundedCornerShape(16.dp))
+            .testTag("${TAG_USER_PHOTO}_${photoItem.id}"),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
     ) {
@@ -71,7 +74,8 @@ fun UserPhotoItemPreview() {
             photoUrl = "https://user.photo.com",
             tags = listOf("tag1", "tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature",
         ),
         preview = true
     )

@@ -33,7 +33,7 @@ class FakePhotoRepository : PhotoSearchRepo {
 
     private val photosDetails = LinkedHashMap<String, PhotoDetails>()
 
-    override suspend fun searchPhotos(query: String, refresh: Boolean): Result<Unit> {
+    override suspend fun searchPhotos(query: String): Result<Unit> {
         return if (shouldThrowError) {
             Result.failure(Exception(FAKE_GET_PHOTOS_ERROR))
         } else {
@@ -50,8 +50,7 @@ class FakePhotoRepository : PhotoSearchRepo {
         }
     }
 
-    override suspend fun getPhotosStream(query: String): Flow<List<PhotoItemUi>> = observablePhotos
-
+    override suspend fun getPhotos(): Flow<List<PhotoItemUi>> = observablePhotos
 
     override suspend fun getPhotoDetails(photoId: String): Result<PhotoItemUi> {
         if (shouldThrowError) {

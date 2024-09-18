@@ -13,7 +13,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_2",
@@ -22,7 +23,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_3",
@@ -31,7 +33,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_4",
@@ -40,7 +43,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         )
     )
 
@@ -53,7 +57,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_6",
@@ -62,7 +67,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_7",
@@ -71,7 +77,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_8",
@@ -80,7 +87,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         ),
         PhotoItemUi(
             id = "photo_9",
@@ -89,7 +97,8 @@ object SharedTestData {
             photoUrl = "https://via.placeholder.com/600",
             tags = listOf("tag1, tag2"),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature"
         )
     )
 

@@ -10,5 +10,6 @@ data class PhotoItemUi(
     val photoUrl: String,
     val tags: List<String>,
     val details: PhotoDetails,
-    val location: PhotoLocation
+    val location: PhotoLocation,
+    val query: String
 )
