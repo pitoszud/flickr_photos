@@ -14,7 +14,7 @@ class RemoteConfigDataSource @Inject constructor() : RemoteConfigDataSourceApi {
     }
 
     companion object {
-        private val DEFAULT_DATA_EXPIRATION_TIME = 24.hours
+        private val DEFAULT_DATA_EXPIRATION_TIME: Duration = 24.hours
     }
 
 

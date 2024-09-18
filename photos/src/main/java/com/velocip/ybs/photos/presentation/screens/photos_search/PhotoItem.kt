@@ -1,4 +1,4 @@
-package com.velocip.ybs.photos.presentation.screens.photos
+package com.velocip.ybs.photos.presentation.screens.photos_search
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

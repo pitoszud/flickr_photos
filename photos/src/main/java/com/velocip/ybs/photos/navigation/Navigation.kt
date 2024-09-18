@@ -5,7 +5,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import com.velocip.ybs.core.Screen
 import com.velocip.ybs.photos.presentation.screens.photo_details.PhotoDetailsRoute
-import com.velocip.ybs.photos.presentation.screens.photos.PhotosRoute
+import com.velocip.ybs.photos.presentation.screens.photos_search.PhotosRoute
 import com.velocip.ybs.photos.presentation.screens.user_photos.UserPhotosRoute
 
 
