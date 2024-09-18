@@ -42,7 +42,7 @@ class UserPhotosViewModel @Inject constructor(
             )
         }.stateIn(
             viewModelScope,
-            SharingStarted.Lazily,
+            SharingStarted.WhileSubscribed(5_000),
             PhotosUiState(false, null, emptyList())
         )
 

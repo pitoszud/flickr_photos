@@ -10,8 +10,12 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.WhileSubscribed
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.filterNot
 import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -27,13 +31,13 @@ class PhotosViewModel @Inject constructor(
     private val _query = MutableStateFlow("")
 
     init {
-        searchPhotos("Yorkshire", false)
+        searchPhotos("Yorkshire")
     }
 
 
     private val photos: StateFlow<List<PhotoItemUi>> = _query
         .flatMapLatest { query ->
-            photoRepo.getPhotosStream(query)
+            photoRepo.getPhotos()
         }
         .stateIn(
             viewModelScope,
@@ -56,11 +60,11 @@ class PhotosViewModel @Inject constructor(
 
 
 
-    fun searchPhotos(query: String, refresh: Boolean) {
+    fun searchPhotos(query: String) {
         _isLoading.value = true
         _query.value = query
         viewModelScope.launch {
-            photoRepo.searchPhotos(query = query.trim(), refresh = refresh).fold(
+            photoRepo.searchPhotos(query = query.trim()).fold(
                 onSuccess = {
                     _isLoading.value = false
                     _errorMessage.value = null

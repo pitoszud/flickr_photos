@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,6 +31,11 @@ import com.velocip.ybs.core.utils.AppConstants.SAMPLE_TEXT
 import com.velocip.ybs.photos.R
 import com.velocip.ybs.photos.presentation.components.ContentLoading
 import com.velocip.ybs.photos.presentation.components.PhotosTopAppBar
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_DETAILS_COUNTRY
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_DETAILS_DATE_TAKEN
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_DETAILS_DESCRIPTION
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_DETAILS_TAKEN_BY
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_DETAILS_VIEWS
 
 @Composable
 fun PhotoDetailsRoute(
@@ -59,7 +65,7 @@ fun PhotoDetailsRoute(
 
 @Composable
 fun PhotoDetailsScreen(
-    onReturn: () -> Unit,
+    onReturn: () -> Unit = {},
     photoUrl: String,
     title: String,
     dateTaken: String,
@@ -128,26 +134,31 @@ fun DetailsContent(
     Column(modifier = Modifier.fillMaxWidth().padding(12.dp)) {
         Spacer(modifier = Modifier.height(4.dp))
         Text(
+            modifier = Modifier.testTag(TAG_PHOTO_DETAILS_DESCRIPTION),
             text = description,
             style = MaterialTheme.typography.bodyLarge
         )
         Spacer(modifier = Modifier.height(28.dp))
         Text(
+            modifier = Modifier.testTag(TAG_PHOTO_DETAILS_DATE_TAKEN),
             text = "Date Taken: $dateTaken",
             style = MaterialTheme.typography.bodyLarge
         )
         views?.let {
             Text(
+                modifier = Modifier.testTag(TAG_PHOTO_DETAILS_VIEWS),
                 text = "Views: $it",
                 style = MaterialTheme.typography.bodyLarge
             )
         }
         Spacer(modifier = Modifier.height(8.dp))
         Text(
+            modifier = Modifier.testTag(TAG_PHOTO_DETAILS_COUNTRY),
             text = "Country: $country",
             style = MaterialTheme.typography.bodyLarge
         )
         Text(
+            modifier = Modifier.testTag(TAG_PHOTO_DETAILS_TAKEN_BY),
             text = "Taken By: $takenBy",
             style = MaterialTheme.typography.bodyLarge
         )

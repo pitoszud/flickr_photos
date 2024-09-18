@@ -23,6 +23,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -33,6 +34,7 @@ import com.velocip.ybs.model.PhotoDetails
 import com.velocip.ybs.model.PhotoItemUi
 import com.velocip.ybs.model.PhotoLocation
 import com.velocip.ybs.photos.R
+import com.velocip.ybs.photos.utils.Tags.TAG_PHOTO_CARD_TAGS_ROW
 import com.velocip.ybs.core.R as CoreR
 
 
@@ -47,7 +49,8 @@ fun PhotoItem(
         //modifier = Modifier.height(140.dp),
         modifier = Modifier
             .padding(8.dp)
-            .shadow(2.dp, shape = RoundedCornerShape(16.dp)),
+            .shadow(2.dp, shape = RoundedCornerShape(16.dp))
+            .testTag("photo_card_${photoItem.id}"),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
     ) {
@@ -125,13 +128,18 @@ fun PhotoItem(
                 }
             }
 
-            LazyRow(modifier = Modifier.padding(16.dp)) {
-                items(photoItem.tags) { tag ->
-                    Text(
-                        text = tag,
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.padding(horizontal = 4.dp)
-                    )
+            if (photoItem.tags.isNotEmpty()) {
+                LazyRow(modifier = Modifier
+                    .padding(16.dp)
+                    .testTag("${TAG_PHOTO_CARD_TAGS_ROW}_${photoItem.id}")
+                ) {
+                    items(photoItem.tags) { tag ->
+                        Text(
+                            text = tag,
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(horizontal = 4.dp)
+                        )
+                    }
                 }
             }
         }
@@ -160,8 +168,9 @@ fun PhotoItemPreview() {
                 "Sunset"
             ),
             details = PhotoDetails(),
-            location = PhotoLocation()
+            location = PhotoLocation(),
+            query = "Nature",
         ),
-        preview = true
+        preview = true,
     )
 }
