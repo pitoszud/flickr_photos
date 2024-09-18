@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
@@ -41,10 +42,13 @@ class FakePhotoRepository : PhotoSearchRepo {
         }
     }
 
+
     override suspend fun getUserPhotos(userId: String): Result<List<PhotoItemUi>> {
-        observablePhotos.firstOrNull()?.let { photos ->
-            return Result.success(photos.filter { it.userId == userId })
-        } ?: return Result.failure(Exception(FAKE_GET_PHOTOS_ERROR))
+        return if (shouldThrowError) {
+            Result.failure(Exception(FAKE_GET_PHOTOS_ERROR))
+        } else {
+            Result.success(observablePhotos.first().filter { it.userId == userId })
+        }
     }
 
     override suspend fun getPhotosStream(query: String): Flow<List<PhotoItemUi>> = observablePhotos

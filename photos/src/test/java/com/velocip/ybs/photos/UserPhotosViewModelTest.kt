@@ -10,6 +10,7 @@ import com.velocip.ybs.photos.presentation.screens.user_photos.UserPhotosViewMod
 import com.velocip.ybs.testing.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
@@ -64,6 +65,7 @@ class UserPhotosViewModelTest {
     }
 
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun `should update state with error if failed fetching user photos`() = runTest {
         photoRepository.setShouldThrowError(true)
@@ -74,6 +76,7 @@ class UserPhotosViewModelTest {
             photoSearchRepo = photoRepository,
             SavedStateHandle(mapOf("id" to userId))
         )
+        advanceUntilIdle()
 
         val uiState = userPhotosViewModel.photosUiState.first()
         assertThat(uiState).isNotNull()

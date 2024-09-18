@@ -5,14 +5,11 @@ import com.google.common.truth.Truth.assertThat
 import com.velocip.ybs.data.fakes.FAKE_PHOTO_NOT_FOUND_ERROR
 import com.velocip.ybs.data.fakes.FakePhotoRepository
 import com.velocip.ybs.model.PhotoDetails
-import com.velocip.ybs.model.PhotoItemUi
-import com.velocip.ybs.model.PhotoLocation
 import com.velocip.ybs.photos.SharedTestData.uiPhotos
 import com.velocip.ybs.photos.presentation.screens.photo_details.PhotoDetailsViewModel
 import com.velocip.ybs.testing.MainCoroutineRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
