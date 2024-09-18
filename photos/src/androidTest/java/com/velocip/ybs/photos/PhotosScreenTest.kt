@@ -97,7 +97,8 @@ val uiPhotos = listOf(
         photoUrl = "https://via.placeholder.com/600",
         tags = listOf("tag1, tag2"),
         details = PhotoDetails(),
-        location = PhotoLocation()
+        location = PhotoLocation(),
+        query = "Yorkshire"
     ),
     PhotoItemUi(
         id = "photo_2",
@@ -106,7 +107,8 @@ val uiPhotos = listOf(
         photoUrl = "https://via.placeholder.com/600",
         tags = listOf("tag1, tag2"),
         details = PhotoDetails(),
-        location = PhotoLocation()
+        location = PhotoLocation(),
+        query = "Yorkshire"
     ),
     PhotoItemUi(
         id = "photo_3",
@@ -115,7 +117,8 @@ val uiPhotos = listOf(
         photoUrl = "https://via.placeholder.com/600",
         tags = listOf("tag1, tag2"),
         details = PhotoDetails(),
-        location = PhotoLocation()
+        location = PhotoLocation(),
+        query = "Yorkshire"
     ),
     PhotoItemUi(
         id = "photo_4",
@@ -124,7 +127,8 @@ val uiPhotos = listOf(
         photoUrl = "https://via.placeholder.com/600",
         tags = listOf("tag1, tag2"),
         details = PhotoDetails(),
-        location = PhotoLocation()
+        location = PhotoLocation(),
+        query = "Yorkshire"
     )
 )
 
