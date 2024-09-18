@@ -58,8 +58,8 @@ class PhotoRepositoryTest {
     @Test
     fun `first default search should delete all existing photos and fetch new photos and update db`() = testScope.runTest {
         photoDao.upsertAll(photoEntities)
-        photoRepository.searchPhotos("London", true)
-        val photos = photoRepository.getPhotosStream("London").first()
+        photoRepository.searchPhotos("London")
+        val photos = photoRepository.getPhotos().first()
         assertThat(photos.size).isEqualTo(4)
         assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
         assertThat(photos[1].id).isEqualTo(defaultPhotoItems[1].photoId)
@@ -70,31 +70,37 @@ class PhotoRepositoryTest {
 
 
     @Test
-    fun `second default search should get photos from db`() = testScope.runTest {
+    fun `second the same search should get the same photos from db`() = testScope.runTest {
         photoDao.upsertAll(photoEntities)
-        photoRepository.searchPhotos("London", false)
-        val photos = photoRepository.getPhotosStream("London").first()
-        assertThat(photos.size).isEqualTo(3)
-        assertThat(photos[0].id).isEqualTo(photoEntities[0].photoId)
-        assertThat(photos[1].id).isEqualTo(photoEntities[1].photoId)
-        assertThat(photos[2].id).isEqualTo(photoEntities[2].photoId)
+        photoRepository.searchPhotos("London")
+        val photos = photoRepository.getPhotos().first()
+        assertThat(photos.size).isEqualTo(4)
+        assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
+        assertThat(photos[1].id).isEqualTo(defaultPhotoItems[1].photoId)
+        assertThat(photos[2].id).isEqualTo(defaultPhotoItems[2].photoId)
+        assertThat(photos[3].id).isEqualTo(defaultPhotoItems[3].photoId)
+
+        photoRepository.searchPhotos("London")
+        val photos2 = photoRepository.getPhotos().first()
+        assertThat(photos2.size).isEqualTo(4)
+        assertThat(photos2[0].id).isEqualTo(defaultPhotoItems[0].photoId)
+        assertThat(photos2[1].id).isEqualTo(defaultPhotoItems[1].photoId)
+        assertThat(photos2[2].id).isEqualTo(defaultPhotoItems[2].photoId)
+        assertThat(photos2[3].id).isEqualTo(defaultPhotoItems[3].photoId)
     }
 
     @Test
     fun `second default search with outdated timestamp should fetch photos from the remote data source`() = testScope.runTest {
         photoDao.upsertAll(photoEntities)
         clock.advanceTimeBy(2.days)
-        photoRepository.searchPhotos("London", false)
-        val photos = photoRepository.getPhotosStream("London").first()
+        photoRepository.searchPhotos("London")
+        val photos = photoRepository.getPhotos().first()
 
-        assertThat(photos.size).isEqualTo(7)
-        assertThat(photos[0].id).isEqualTo(photoEntities[0].photoId)
-        assertThat(photos[1].id).isEqualTo(photoEntities[1].photoId)
-        assertThat(photos[2].id).isEqualTo(photoEntities[2].photoId)
-        assertThat(photos[3].id).isEqualTo(defaultPhotoItems[0].photoId)
-        assertThat(photos[4].id).isEqualTo(defaultPhotoItems[1].photoId)
-        assertThat(photos[5].id).isEqualTo(defaultPhotoItems[2].photoId)
-        assertThat(photos[6].id).isEqualTo(defaultPhotoItems[3].photoId)
+        assertThat(photos.size).isEqualTo(4)
+        assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
+        assertThat(photos[1].id).isEqualTo(defaultPhotoItems[1].photoId)
+        assertThat(photos[2].id).isEqualTo(defaultPhotoItems[2].photoId)
+        assertThat(photos[3].id).isEqualTo(defaultPhotoItems[3].photoId)
 
     }
 
@@ -103,8 +109,8 @@ class PhotoRepositoryTest {
     fun `second search with outdated timestamp should fetch photos from the remote data source`() = testScope.runTest {
         photoDao.upsertAll(photoEntities)
         clock.advanceTimeBy(2.days)
-        photoRepository.searchPhotos("London", true)
-        val photos = photoRepository.getPhotosStream("London").first()
+        photoRepository.searchPhotos("London")
+        val photos = photoRepository.getPhotos().first()
 
         assertThat(photos.size).isEqualTo(4)
         assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
@@ -118,8 +124,8 @@ class PhotoRepositoryTest {
     @Test
     fun `new search should delete all existing photos and fetch new photos and update db`() = testScope.runTest {
         photoDao.upsertAll(photoEntities)
-        photoRepository.searchPhotos("query", true)
-        val photos = photoRepository.getPhotosStream("query").first()
+        photoRepository.searchPhotos("query")
+        val photos = photoRepository.getPhotos().first()
         assertThat(photos.size).isEqualTo(4)
         assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
         assertThat(photos[1].id).isEqualTo(defaultPhotoItems[1].photoId)
@@ -127,9 +133,9 @@ class PhotoRepositoryTest {
         assertThat(photos[3].id).isEqualTo(defaultPhotoItems[3].photoId)
 
         photoRemoteDataSource.photos = photoItems.toMutableList()
-        photoRepository.searchPhotos("query2", true)
+        photoRepository.searchPhotos("query2")
 
-        val photos2 = photoRepository.getPhotosStream("query2").first()
+        val photos2 = photoRepository.getPhotos().first()
         assertThat(photos2.size).isEqualTo(3)
         assertThat(photos2[0].id).isEqualTo(photoItems[0].photoId)
         assertThat(photos2[1].id).isEqualTo(photoItems[1].photoId)
@@ -142,9 +148,9 @@ class PhotoRepositoryTest {
     fun `network error should return failure result`() = testScope.runTest {
         photoRemoteDataSource.setShouldThrowError(true)
         photoDao.upsertAll(photoEntities)
-        val result = photoRepository.searchPhotos("query", true)
+        val result = photoRepository.searchPhotos("query")
         assertThat(result.isFailure).isTrue()
-        val photos = photoRepository.getPhotosStream("query").first()
+        val photos = photoRepository.getPhotos().first()
         assertThat(photos.size).isEqualTo(0)
     }
 

@@ -30,21 +30,25 @@ class PhotoSearchRepository @Inject constructor(
     @DefaultDispatcher private val dispatcher: CoroutineDispatcher,
 ) : PhotoSearchRepo {
 
-    override suspend fun searchPhotos(query: String, refresh: Boolean): Result<Unit> {
+    private var recentQuery: String = ""
+
+    override suspend fun searchPhotos(query: String): Result<Unit> {
         return withContext(dispatcher) {
             try {
-                if (refresh) {
-                    photoDao.deleteAll()
-                } else {
-                    val localPhotos = photoDao.getPhotos(query).firstOrNull() ?: emptyList()
+                if (recentQuery == query) {
+                    val localPhotos = photoDao.getPhotosByQuery(query).firstOrNull() ?: emptyList()
                     val isDataExpired = localPhotos.any {
                         clock.nowInstant().minus(it.timestamp) > remoteConfigDataSource.getCacheRemoteConfig().dataExpirationTime
                     }
                     if (localPhotos.isNotEmpty() && !isDataExpired) {
+                        // query matches local photos and they are not expired
                         return@withContext Result.success(Unit)
                     }
                 }
+                recentQuery = query
 
+                // New search, so remove all previous photos from the previous query
+                photoDao.deleteAll()
                 val remoteResult = photoRemoteDataSource.getPhotos(query)
                 remoteResult.fold(
                     onSuccess = { photos: List<PhotoItem> ->
@@ -63,17 +67,17 @@ class PhotoSearchRepository @Inject constructor(
         }
     }
 
-    override suspend fun getPhotosStream(query: String): Flow<List<PhotoItemUi>> =
-        photoDao.getPhotos(query).map {
+    override suspend fun getPhotos(): Flow<List<PhotoItemUi>> {
+        return photoDao.getAllPhotos().map {
             withContext(dispatcher) {
-                it.map { photoEntity: PhotoEntity -> photoEntity.toPhotoUi() }
+                it.map { photoEntity: PhotoEntity ->
+                    photoEntity.toPhotoUi()
+                }
             }
         }.catch { e ->
-            // TODO - log error
             emit(emptyList())
         }
-
-
+    }
 
     override suspend fun getPhotoDetails(photoId: String): Result<PhotoItemUi> {
         val photoEntity: PhotoEntity? = photoDao.getPhoto(photoId)
@@ -150,13 +154,5 @@ class PhotoSearchRepository @Inject constructor(
             takenBy = photoDetails.takenBy
         )
     }
-}
-
-
-interface PhotoSearchRepo {
-    suspend fun searchPhotos(query: String, refresh: Boolean): Result<Unit>
-    suspend fun getUserPhotos(userId: String): Result<List<PhotoItemUi>>
-    suspend fun getPhotosStream(query: String): Flow<List<PhotoItemUi>>
-    suspend fun getPhotoDetails(photoId: String): Result<PhotoItemUi>
 }
 

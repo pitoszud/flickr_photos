@@ -26,6 +26,7 @@ fun PhotoEntity.toPhotoUi() = PhotoItemUi(
         longitude = this.longitude
     ),
     tags = this.tags,
+    query = this.userQuery
 )
 
 fun PhotoItem.toPhotoEntity(userQuery: String): PhotoEntity {
@@ -70,5 +71,6 @@ fun PhotoItem.toPhotoItemUi(): PhotoItemUi {
             longitude = 0.0
         ),
         tags = this.tags,
+        query = ""
     )
 }

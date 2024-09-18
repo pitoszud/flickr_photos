@@ -10,9 +10,13 @@ class FakePhotoDao : PhotoDao {
     private val photos = mutableListOf<PhotoEntity>()
 
 
-    override fun getPhotos(usrQuery: String): Flow<List<PhotoEntity>> = flow {
+    override fun getPhotosByQuery(usrQuery: String): Flow<List<PhotoEntity>> = flow {
         val filteredPhotos = photos.filter { it.userQuery == usrQuery }
         emit(filteredPhotos)
+    }
+
+    override fun getAllPhotos(): Flow<List<PhotoEntity>> = flow {
+        emit(photos)
     }
 
     override suspend fun deleteAll() {
@@ -30,4 +34,8 @@ class FakePhotoDao : PhotoDao {
     override suspend fun upsertPhoto(photoEntity: PhotoEntity) {
         photos.add(photoEntity)
     }
+
+
+
+
 }

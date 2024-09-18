@@ -13,11 +13,19 @@ import kotlinx.coroutines.flow.Flow
 interface PhotoDao {
 
     /**
+     * Observes all photos by query.
+     * @return all photos from query as flow.
+     */
+    @Query("SELECT * FROM query_photos WHERE userQuery = :usrQuery")
+    fun getPhotosByQuery(usrQuery: String): Flow<List<PhotoEntity>>
+
+
+    /**
      * Observes all photos.
      * @return all photos as flow.
      */
-    @Query("SELECT * FROM query_photos WHERE userQuery = :usrQuery")
-    fun getPhotos(usrQuery: String): Flow<List<PhotoEntity>>
+    @Query("SELECT * FROM query_photos")
+    fun getAllPhotos(): Flow<List<PhotoEntity>>
 
 
     /**

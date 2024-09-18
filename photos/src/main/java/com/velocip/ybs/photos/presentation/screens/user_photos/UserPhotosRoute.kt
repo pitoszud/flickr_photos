@@ -32,7 +32,7 @@ fun UserPhotosRoute(
 
 @Composable
 fun UserPhotosScreen(
-    onReturn: () -> Unit,
+    onReturn: () -> Unit = {},
     photos: List<PhotoItemUi>,
     loading: Boolean
 ) {

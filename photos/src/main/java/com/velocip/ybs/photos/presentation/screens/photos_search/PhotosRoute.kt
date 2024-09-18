@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.foundation.lazy.items
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -32,13 +33,13 @@ fun PhotosRoute(
     navigateToPhotoDetails: (String) -> Unit,
     navigateToUserPhotos: (String) -> Unit
 ) {
-    val photosUiState by viewModel.photosUiState.collectAsStateWithLifecycle()
+    val photosUiState by viewModel.photosUiState.collectAsState()
     PhotosScreen(
         photosUiState = photosUiState,
         navigateToPhotoDetails = navigateToPhotoDetails,
         navigateToUserPhotos = navigateToUserPhotos,
         searchPhotos = { query ->
-            viewModel.searchPhotos(query, true)
+            viewModel.searchPhotos(query)
         }
     )
 
@@ -48,9 +49,9 @@ fun PhotosRoute(
 @Composable
 fun PhotosScreen(
     photosUiState: PhotosUiState,
-    navigateToPhotoDetails: (String) -> Unit,
-    navigateToUserPhotos: (String) -> Unit,
-    searchPhotos: (String) -> Unit
+    navigateToPhotoDetails: (String) -> Unit = {},
+    navigateToUserPhotos: (String) -> Unit = {},
+    searchPhotos: (String) -> Unit = {}
 ) {
     var textState by remember { mutableStateOf("") }
     val keyboardController = LocalSoftwareKeyboardController.current
@@ -107,7 +108,8 @@ fun PhotosRoutePreview() {
                     photoUrl = "https://user.photo.com",
                     tags = listOf("Nature", "Landscape", "Mountain", "River"),
                     details = PhotoDetails(),
-                    location = PhotoLocation()
+                    location = PhotoLocation(),
+                    query = "Nature"
                 ),
                 PhotoItemUi(
                     id = "customer_id",
@@ -116,7 +118,8 @@ fun PhotosRoutePreview() {
                     photoUrl = "https://user.photo.com",
                     tags = listOf("Nature", "Landscape", "Mountain", "River"),
                     details = PhotoDetails(),
-                    location = PhotoLocation()
+                    location = PhotoLocation(),
+                    query = "Nature"
                 )
             )
         ),

@@ -17,17 +17,21 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.velocip.ybs.photos.utils.Tags.TAG_SEARCH_ICON
+import com.velocip.ybs.photos.utils.Tags.TAG_SEARCH_PHOTO_INPUT
 
 
 @Composable
@@ -48,7 +52,8 @@ fun SearchPhotoInput(
         OutlinedTextField(
             modifier = Modifier
                 .weight(1f)
-                .verticalScroll(scrollState),
+                .verticalScroll(scrollState)
+                .testTag(TAG_SEARCH_PHOTO_INPUT),
             value = userInput,
             onValueChange = { typedValue ->
                 onValueChange(typedValue)
@@ -66,24 +71,26 @@ fun SearchPhotoInput(
                 }
             ),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedTextColor = Color.Black,
-                focusedTextColor = Color.Black,
-                focusedBorderColor = if (userInput.isNotEmpty()) Color.Green else Color.DarkGray,
-                unfocusedBorderColor = Color.DarkGray,
+                unfocusedTextColor = colorScheme.onSurface,
+                focusedTextColor = colorScheme.onSurface,
+                focusedBorderColor = if (userInput.isNotEmpty()) colorScheme.primary else colorScheme.onSurface.copy(alpha = 0.5f),
+                unfocusedBorderColor = colorScheme.onSurface.copy(alpha = 0.5f),
             ),
             shape = RoundedCornerShape(24.dp)
         )
 
         Spacer(modifier = Modifier.width(8.dp))
         IconButton(
+            modifier = Modifier.testTag(TAG_SEARCH_ICON),
             enabled = userInput.isNotEmpty(),
             onClick = { onSearchPhotos() }
         ) {
             Icon(
-                modifier = Modifier.size(36.dp),
+                modifier = Modifier
+                    .size(36.dp),
                 imageVector = Icons.Rounded.Search,
                 contentDescription = "Search",
-                tint = Color.Black
+                tint = colorScheme.onSurface
             )
         }
     }

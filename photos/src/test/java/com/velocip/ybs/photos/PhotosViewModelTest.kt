@@ -101,7 +101,7 @@ class PhotosViewModelTest {
 
         photoRepository.addPhotos(uiPhotos2, true)
 
-        photosViewModel.searchPhotos("query", true)
+        photosViewModel.searchPhotos("query")
 
         uiState = photosViewModel.photosUiState.first()
         assertThat(uiState).isNotNull()
@@ -132,7 +132,7 @@ class PhotosViewModelTest {
         assertThat(isLoading).isTrue()
         advanceUntilIdle()
 
-        photosViewModel.searchPhotos("query", true)
+        photosViewModel.searchPhotos("query")
 
         val uiState = photosViewModel.photosUiState.first()
         assertThat(uiState).isNotNull()

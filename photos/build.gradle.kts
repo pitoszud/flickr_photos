@@ -51,8 +51,6 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.ui.tooling.preview)
 
     // Hilt
@@ -75,4 +73,16 @@ dependencies {
     testImplementation(libs.google.truth)
     testImplementation(libs.test.mockk)
     testImplementation(libs.test.robolectric)
+
+    // Android unit tests
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.1")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.7.1")
+
+    // Espresso
+
 }
