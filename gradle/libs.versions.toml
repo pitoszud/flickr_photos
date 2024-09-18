@@ -25,6 +25,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 truthVersion = "1.4.3"
+test-robolectric = "4.12.2"
 uiTestJunit4 = "1.6.8"
 test-mockk = "1.13.5"
 kotlinxCoroutinesTest = "1.6.4"
@@ -98,6 +99,7 @@ ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
 ktor-client-websockets = { module = "io.ktor:ktor-client-websockets", version.ref = "ktor" }
 test-ktor-client-mock = { module = "io.ktor:ktor-client-mock", version.ref = "ktor" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "test-mockk" }
+test-robolectric = { module = "org.robolectric:robolectric", version.ref = "test-robolectric" }
 ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "uiTestJunit4" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }

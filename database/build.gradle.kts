@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
     debugImplementation(libs.ui.tooling)
+    testImplementation(libs.hilt.android.testing)
     ksp(libs.hilt.android.compiler)
 
 
@@ -63,4 +64,5 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.google.truth)
     testImplementation(libs.test.mockk)
+    testImplementation(libs.test.robolectric)
 }

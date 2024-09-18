@@ -34,7 +34,6 @@ class PhotoRepositoryTest {
     private lateinit var clock: FakeClock
 
     // scope
-
     private var testDispatcher = UnconfinedTestDispatcher()
     private var testScope = TestScope(testDispatcher)
 
