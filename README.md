@@ -24,7 +24,7 @@ Alternatively, you can enter you api key in the network-call URL in the PhotoRem
 - **io.mockk:mockk** - used for mocking in tests.
 - **org.robolectric** - used for running android tests.
 
-- ## Caching strategy
+## Caching strategy
 
 - The first default search will clear the local cache and fetch new photos from the api, then it will upsert all photos.
 - The second default search or the same query will fetch the photos from the local database, avoiding additional network call.
