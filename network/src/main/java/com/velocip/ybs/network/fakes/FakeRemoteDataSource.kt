@@ -3,8 +3,6 @@ package com.velocip.ybs.network.fakes
 import com.velocip.ybs.network.data_source.PhotoRemoteDataSource
 import com.velocip.ybs.network.result.PhotoDetailsItem
 import com.velocip.ybs.network.result.PhotoItem
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
 
 class FakeRemoteDataSource(var photos: MutableList<PhotoItem>) : PhotoRemoteDataSource {
 

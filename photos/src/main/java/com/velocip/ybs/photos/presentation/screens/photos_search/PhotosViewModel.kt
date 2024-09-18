@@ -1,6 +1,5 @@
 package com.velocip.ybs.photos.presentation.screens.photos_search
 
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.velocip.ybs.data.repo.PhotoSearchRepo
