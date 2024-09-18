@@ -32,4 +32,12 @@ You can submit a standard pull request on **Develop** branch e.g **my_feature_br
 - **com.google.truth** - used in unit tests for assertions.
 - **io.coil-kt:coil** - used to load network images asynchronously.
 - **io.mockk:mockk** - used for mocking in tests.
+
+- ## Caching strategy
+
+- The first default search will clear the local cache and fetch new photos from the api, then it will upsert all photos.
+- The second default search or the same query search will fetch the photos from the local database, avoiding additional network call.
+- A new search will fetch new photos from the API
+- If the existing cached photos are more than one day old, the query will clear the cache and fetch new photos from the API
+
  
