@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -70,10 +71,10 @@ fun SearchPhotoInput(
                 }
             ),
             colors = OutlinedTextFieldDefaults.colors(
-                unfocusedTextColor = Color.Black,
-                focusedTextColor = Color.Black,
-                focusedBorderColor = if (userInput.isNotEmpty()) Color.Green else Color.DarkGray,
-                unfocusedBorderColor = Color.DarkGray,
+                unfocusedTextColor = colorScheme.onSurface,
+                focusedTextColor = colorScheme.onSurface,
+                focusedBorderColor = if (userInput.isNotEmpty()) colorScheme.primary else colorScheme.onSurface.copy(alpha = 0.5f),
+                unfocusedBorderColor = colorScheme.onSurface.copy(alpha = 0.5f),
             ),
             shape = RoundedCornerShape(24.dp)
         )
@@ -89,7 +90,7 @@ fun SearchPhotoInput(
                     .size(36.dp),
                 imageVector = Icons.Rounded.Search,
                 contentDescription = "Search",
-                tint = Color.Black
+                tint = colorScheme.onSurface
             )
         }
     }
