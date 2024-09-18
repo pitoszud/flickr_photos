@@ -8,9 +8,14 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
+
+
+const val FAKE_PHOTO_NOT_FOUND_ERROR = "Photo details not found"
+const val FAKE_GET_PHOTOS_ERROR = "No photos found for the user"
 
 class FakePhotoRepository : PhotoSearchRepo {
 
@@ -21,7 +26,7 @@ class FakePhotoRepository : PhotoSearchRepo {
 
     private val observablePhotos: Flow<List<PhotoItemUi>> = _photos.map {
         if (shouldThrowError) {
-            throw Exception("Test exception")
+            emptyList()
         } else {
             it.values.toList()
         }
@@ -30,24 +35,34 @@ class FakePhotoRepository : PhotoSearchRepo {
     private val photosDetails = LinkedHashMap<String, PhotoDetails>()
 
     override suspend fun searchPhotos(query: String, refresh: Boolean): Result<Unit> {
-        return Result.success(Unit)
+        return if (shouldThrowError) {
+            Result.failure(Exception(FAKE_GET_PHOTOS_ERROR))
+        } else {
+            Result.success(Unit)
+        }
     }
 
+
     override suspend fun getUserPhotos(userId: String): Result<List<PhotoItemUi>> {
-        observablePhotos.firstOrNull()?.let { photos ->
-            return Result.success(photos.filter { it.userId == userId })
-        } ?: return Result.failure(Exception("No photos found"))
+        return if (shouldThrowError) {
+            Result.failure(Exception(FAKE_GET_PHOTOS_ERROR))
+        } else {
+            Result.success(observablePhotos.first().filter { it.userId == userId })
+        }
     }
 
     override suspend fun getPhotosStream(query: String): Flow<List<PhotoItemUi>> = observablePhotos
 
+
     override suspend fun getPhotoDetails(photoId: String): Result<PhotoItemUi> {
-        return photos.value[photoId]?.let { photo ->
-            val photoDetails = photo.copy(
-                details = photosDetails[photoId]!!
+        if (shouldThrowError) {
+            return Result.failure(Exception(FAKE_PHOTO_NOT_FOUND_ERROR))
+        } else {
+            val photoDetails = photos.value[photoId]!!.copy(
+                details = photosDetails[photoId] ?: PhotoDetails()
             )
-            Result.success(photoDetails)
-        } ?: Result.failure(Exception("Photo not found"))
+            return Result.success(photoDetails)
+        }
     }
 
 
@@ -57,13 +72,18 @@ class FakePhotoRepository : PhotoSearchRepo {
 
 
     @VisibleForTesting
-    fun addPhotos(vararg photos: PhotoItemUi) {
-        _photos.update { oldPhotos ->
-            val newPhotos = LinkedHashMap<String, PhotoItemUi>(oldPhotos)
-            for (photo in photos) {
-                newPhotos[photo.id] = photo
+    fun addPhotos(photos: List<PhotoItemUi>, replace: Boolean = false) {
+        if (replace) {
+            _photos.value.clear()
+            _photos.value.putAll(photos.associateBy { it.id })
+        } else {
+            _photos.update { oldPhotos ->
+                val newPhotos = LinkedHashMap<String, PhotoItemUi>(oldPhotos)
+                for (photo in photos) {
+                    newPhotos[photo.id] = photo
+                }
+                newPhotos
             }
-            newPhotos
         }
     }
 

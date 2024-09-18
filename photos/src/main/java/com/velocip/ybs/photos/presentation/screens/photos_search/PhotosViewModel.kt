@@ -20,7 +20,6 @@ import javax.inject.Inject
 @OptIn(ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class PhotosViewModel @Inject constructor(
-    private val savedStateHandle: SavedStateHandle,
     private val photoRepo: PhotoSearchRepo
 ) : ViewModel() {
 
@@ -73,7 +72,6 @@ class PhotosViewModel @Inject constructor(
                 }
             )
         }
-
     }
 
 }

@@ -160,11 +160,6 @@ fun DetailsContent(
             text = "Taken By: $takenBy",
             style = MaterialTheme.typography.bodyLarge
         )
-
-        Text(
-            text = "Location: $takenBy",
-            style = MaterialTheme.typography.bodyLarge
-        )
     }
 }
 

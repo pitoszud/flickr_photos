@@ -17,6 +17,7 @@ import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.Instant
 import org.junit.Before
 import org.junit.Test
+import kotlin.time.Duration.Companion.days
 
 private val timestamp = Instant.parse("2024-09-18T11:17:29.418262Z")
 
@@ -34,7 +35,6 @@ class PhotoRepositoryTest {
     private lateinit var clock: FakeClock
 
     // scope
-
     private var testDispatcher = UnconfinedTestDispatcher()
     private var testScope = TestScope(testDispatcher)
 
@@ -78,6 +78,40 @@ class PhotoRepositoryTest {
         assertThat(photos[0].id).isEqualTo(photoEntities[0].photoId)
         assertThat(photos[1].id).isEqualTo(photoEntities[1].photoId)
         assertThat(photos[2].id).isEqualTo(photoEntities[2].photoId)
+    }
+
+    @Test
+    fun `second default search with outdated timestamp should fetch photos from the remote data source`() = testScope.runTest {
+        photoDao.upsertAll(photoEntities)
+        clock.advanceTimeBy(2.days)
+        photoRepository.searchPhotos("London", false)
+        val photos = photoRepository.getPhotosStream("London").first()
+
+        assertThat(photos.size).isEqualTo(7)
+        assertThat(photos[0].id).isEqualTo(photoEntities[0].photoId)
+        assertThat(photos[1].id).isEqualTo(photoEntities[1].photoId)
+        assertThat(photos[2].id).isEqualTo(photoEntities[2].photoId)
+        assertThat(photos[3].id).isEqualTo(defaultPhotoItems[0].photoId)
+        assertThat(photos[4].id).isEqualTo(defaultPhotoItems[1].photoId)
+        assertThat(photos[5].id).isEqualTo(defaultPhotoItems[2].photoId)
+        assertThat(photos[6].id).isEqualTo(defaultPhotoItems[3].photoId)
+
+    }
+
+
+    @Test
+    fun `second search with outdated timestamp should fetch photos from the remote data source`() = testScope.runTest {
+        photoDao.upsertAll(photoEntities)
+        clock.advanceTimeBy(2.days)
+        photoRepository.searchPhotos("London", true)
+        val photos = photoRepository.getPhotosStream("London").first()
+
+        assertThat(photos.size).isEqualTo(4)
+        assertThat(photos[0].id).isEqualTo(defaultPhotoItems[0].photoId)
+        assertThat(photos[1].id).isEqualTo(defaultPhotoItems[1].photoId)
+        assertThat(photos[2].id).isEqualTo(defaultPhotoItems[2].photoId)
+        assertThat(photos[3].id).isEqualTo(defaultPhotoItems[3].photoId)
+
     }
 
 

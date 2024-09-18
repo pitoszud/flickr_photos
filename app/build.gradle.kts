@@ -83,6 +83,7 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
     debugImplementation(libs.ui.tooling)
+    testImplementation(libs.hilt.android.testing)
     ksp(libs.hilt.android.compiler)
 
     // Navigation
@@ -93,4 +94,12 @@ dependencies {
     implementation(libs.androidx.compose.material3.adaptive.layout)
     implementation(libs.androidx.compose.material3.adaptive.navigation)
     implementation(libs.androidx.compose.material3.windowSizeClass)
+
+    // Testing
+    implementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.google.truth)
+    testImplementation(libs.test.mockk)
+    testImplementation(libs.test.robolectric)
+
 }
