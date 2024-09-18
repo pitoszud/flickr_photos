@@ -5,7 +5,7 @@ import com.velocip.ybs.database.entity.PhotoEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class FakePhotoDao() : PhotoDao {
+class FakePhotoDao : PhotoDao {
 
     private val photos = mutableListOf<PhotoEntity>()
 

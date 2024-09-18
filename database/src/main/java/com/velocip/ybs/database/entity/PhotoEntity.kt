@@ -1,13 +1,14 @@
 package com.velocip.ybs.database.entity
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.Fts4
 import androidx.room.PrimaryKey
 import kotlinx.datetime.Instant
-import java.sql.Timestamp
 
-
+/**
+ * Entity class for the photo table.
+ * Combines both query photos and photo details.
+ *
+* */
 @Entity(tableName = "query_photos")
 data class PhotoEntity(
     @PrimaryKey

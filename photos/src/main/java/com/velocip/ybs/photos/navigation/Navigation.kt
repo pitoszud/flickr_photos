@@ -10,15 +10,11 @@ import com.velocip.ybs.photos.presentation.screens.user_photos.UserPhotosRoute
 
 
 fun NavGraphBuilder.photosScreen(
-    onReturn: () -> Unit,
     navigateToPhotoDetails: (String) -> Unit,
     navigateToUserPhotos: (String) -> Unit
 ) {
     composable<Screen.Photos> {
         PhotosRoute(
-            onReturn = {
-                onReturn()
-            },
             navigateToPhotoDetails = { photoId ->
                 navigateToPhotoDetails(photoId)
             },

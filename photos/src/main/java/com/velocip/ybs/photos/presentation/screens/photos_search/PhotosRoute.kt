@@ -28,7 +28,6 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun PhotosRoute(
-    onReturn: () -> Unit,
     viewModel: PhotosViewModel = hiltViewModel(),
     navigateToPhotoDetails: (String) -> Unit,
     navigateToUserPhotos: (String) -> Unit
@@ -59,7 +58,7 @@ fun PhotosScreen(
 
     Column(modifier = Modifier
         .fillMaxWidth()
-        .padding(top = 34.dp)
+        .padding(top = 64.dp)
     ) {
         SearchPhotoInput(
             userInput = textState,
@@ -75,7 +74,7 @@ fun PhotosScreen(
                 }
             }
         )
-        Spacer(Modifier.height(34.dp))
+        Spacer(Modifier.height(12.dp))
 
         LazyColumn {
             items(photosUiState.photos) { photo ->

@@ -40,7 +40,7 @@ fun SearchPhotoInput(
     Row(
         modifier = Modifier
             .height(IntrinsicSize.Min)
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.Bottom
     ) {

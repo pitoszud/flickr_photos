@@ -28,7 +28,6 @@ fun Navigation(
         startDestination = Screen.Photos
     ) {
         photosScreen(
-            onReturn = context::finish,
             navigateToPhotoDetails = { photoId ->
                 navController.navigate(route = Screen.PhotoDetails(id = photoId))
             },
