@@ -1,7 +1,7 @@
-# YBS Photo Flickr test
+# Photo Flickr sample app
 
 ## About this project
-Showcase a simple photo search app using Flickr API (details in the separate spec file)
+Showcase a simple photo search app using Flickr API
 
 ## What this project is not or does not have (yet)
 
